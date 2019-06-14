@@ -27,9 +27,10 @@ public class Main {
         array.remove(2);
         System.out.println("Find index for 2: " + array.indexOf(2));
 
-        System.out.println("array sortBubble() Time " + array.sortBubble() + "millesec");
-        System.out.println("array1 sortSelect() Time " + array1.sortSelect()+ "millesec");
-        System.out.println("array2 sortInsert() Time " + array2.sortInsert()+ "millesec");
+        System.out.println("array sortBubble() Time " + array.sortBubble() + " millesec");
+
+        System.out.println("array1 sortSelect() Time " + array1.sortSelect()+ " millesec");
+        System.out.println("array2 sortInsert() Time " + array2.sortInsert()+ " millesec");
 
     }
 
