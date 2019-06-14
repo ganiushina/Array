@@ -152,5 +152,4 @@ public class ArrayImpl<E extends Object & Comparable<? super E>> implements Arra
         return elapsedTime;
     }
 
-
 }
