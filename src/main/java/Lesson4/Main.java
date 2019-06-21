@@ -19,6 +19,8 @@ public class Main {
         linkedList.insertFirst(4);
         linkedList.insertLast(5);
 
+
+
         linkedList.display();
 
         System.out.println("Find 2: " + linkedList.contains(2));

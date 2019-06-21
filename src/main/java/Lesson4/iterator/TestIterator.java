@@ -30,7 +30,10 @@ public class TestIterator {
         linkedList.insertFirst(2);
         linkedList.insertFirst(3);
 
+
        Iterator<Integer> iterator = linkedList.iterator();
+
+
 
         while (iterator.hasNext()) {
             Integer value = iterator.next();
@@ -41,7 +44,6 @@ public class TestIterator {
 //            Integer value = (Integer) it.next();
 //            System.out.println(value);
 //        }
-
 
 
 
@@ -60,23 +62,23 @@ public class TestIterator {
 //        System.out.println("---");
 //
 //
-        LinkedList<Integer> linkedListJdk = new LinkedList<>();
-        linkedListJdk.add(1);
-        linkedListJdk.add(2);
-        linkedListJdk.add(3);
-
-//        for (Integer value : linkedListJdk) {
+//        LinkedList<Integer> linkedListJdk = new LinkedList<>();
+//        linkedListJdk.add(1);
+//        linkedListJdk.add(2);
+//        linkedListJdk.add(3);
+//
+////        for (Integer value : linkedListJdk) {
+////            System.out.println(value);
+////        }
+////
+//        Iterator<Integer> iterator1 = linkedListJdk.iterator();
+//        while (iterator1.hasNext()) {
+//            Integer value = iterator1.next();
 //            System.out.println(value);
 //        }
 //
-        Iterator<Integer> iterator1 = linkedListJdk.iterator();
-        while (iterator1.hasNext()) {
-            Integer value = iterator1.next();
-            System.out.println(value);
-        }
-
-
-        System.out.println("---");
+//
+//        System.out.println("---");
     }
 
     private static int next(int[] array, int i) {

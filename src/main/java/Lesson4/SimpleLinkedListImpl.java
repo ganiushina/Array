@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class SimpleLinkedListImpl<E> implements LinkedList<E>, Iterator<E> {
+public class SimpleLinkedListImpl<E> implements LinkedList<E> {
 //public class SimpleLinkedListImpl<E> implements LinkedList<E>  {
 
     protected Entry<E> firstElement;//001[005]
@@ -112,8 +112,8 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E>, Iterator<E> {
 
     @Override
     public boolean hasNext() {
-      //  Entry<E> current = this.firstElement;
-        return firstElement.next != null || firstElement.value !=null;
+        Entry<E> current = this.firstElement;
+        return current.next != null;
 //        if (current.next != null) {
 //            return true;
 //        }
@@ -123,19 +123,19 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E>, Iterator<E> {
 
     @Override
     public E next() {
-//        E current = firstElement.value;
-//        E previous = null;
-        Entry<E> current = firstElement;
-        Entry<E> previous = null;
-        //while (current != null) {
-        //    System.out.println(current.value);
-           // firstElement = current.next;
-        if (current != null){
-            previous = current;
-            firstElement = current.next;
-       }
+        E current = firstElement.value;
+        firstElement = firstElement.next;
+//        Entry<E> current = firstElement;
+//        Entry<E> previous = null;
+//        //while (current != null) {
+//        //    System.out.println(current.value);
+//           // firstElement = current.next;
+//        if (current != null){
+//            previous = current;
+//            firstElement = current.next;
+//       }
 
-        return previous.value ;
+        return  current;
 
 //        Entry<E> current = firstElement;
 //        E value = current.value; // значение в текущем узле
