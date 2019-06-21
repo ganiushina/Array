@@ -1,21 +1,19 @@
 package Lesson4;
 
 
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class SimpleLinkedListImpl<E> implements LinkedList<E> {
-//public class SimpleLinkedListImpl<E> implements LinkedList<E>  {
 
-    protected Entry<E> firstElement;//001[005]
+    protected Entry<E> firstElement;
     protected int size;
 
     @Override//O(1)
     public void insertFirst(E value) {
-        Entry<E> entry = new Entry<>(value);//002[007]
-        entry.next = firstElement;//007[...next->005]
-        firstElement = entry;//001[007]
+        Entry<E> entry = new Entry<>(value);
+        entry.next = firstElement;
+        firstElement = entry;
         size++;
     }
 
@@ -132,35 +130,5 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E> {
         };
         return it;
     }
-
-//    public Iterator<E> iterator() {
-//        return new MyLinkedListIterator();
-//    }
-////
-//    public class MyLinkedListIterator implements Iterator<E> {
-//
-//        private Entry<E> curr;
-//
-//        public MyLinkedListIterator() {
-//            this.curr = SimpleLinkedListImpl.this.firstElement; // голова списка
-//        }
-//
-//        public boolean hasNext() {
-//            return this.curr != null;
-//        }
-//
-//        public E next() {
-//            if (!this.hasNext()) {
-//                throw new NoSuchElementException();
-//            }
-//            E value = curr.value;
-//            curr = curr.next;
-//            return value;
-//        }
-//
-//        public void remove() {
-//            throw new UnsupportedOperationException();
-//        }
-//    }
 
 }

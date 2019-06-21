@@ -3,7 +3,6 @@ package Lesson4;
 import java.util.Iterator;
 
 public interface LinkedList<E> extends Iterable<E>   {
-    //public interface LinkedList<E> extends Iterator<E> {
 
     void insertFirst(E value);
 
@@ -22,8 +21,6 @@ public interface LinkedList<E> extends Iterable<E>   {
     E getFirstElement();
 
     Entry getFirst();
-
-    Iterator<E> iterator();
 
 
     static class Entry<E>  {

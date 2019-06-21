@@ -20,7 +20,6 @@ public class Main {
         linkedList.insertLast(5);
 
 
-
         linkedList.display();
 
         System.out.println("Find 2: " + linkedList.contains(2));
