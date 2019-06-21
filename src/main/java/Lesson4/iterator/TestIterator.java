@@ -31,9 +31,8 @@ public class TestIterator {
         linkedList.insertFirst(3);
 
 
+
        Iterator<Integer> iterator = linkedList.iterator();
-
-
 
         while (iterator.hasNext()) {
             Integer value = iterator.next();
@@ -53,7 +52,7 @@ public class TestIterator {
 //        for (Integer value : linkedList) {
 //            System.out.println(value);
 //        }
-//
+
 //        Lesson4.LinkedList.Entry current = linkedList.getFirst();
 //        while (current != null) {
 //            System.out.println(current.value);
