@@ -53,7 +53,7 @@ public class TestIterator {
 //        for (Integer value : linkedList) {
 //            System.out.println(value);
 //        }
-////
+//
 //        Lesson4.LinkedList.Entry current = linkedList.getFirst();
 //        while (current != null) {
 //            System.out.println(current.value);

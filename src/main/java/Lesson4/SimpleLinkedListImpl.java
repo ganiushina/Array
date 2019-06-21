@@ -107,100 +107,28 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E> {
 
     @Override
     public Iterator<E> iterator() {
-        return this;
+        Iterator<E> it = new Iterator<E>() {
+
+            private int currentIndex = 0;
+
+            @Override
+            public boolean hasNext() {
+                return firstElement.next.value != null;
+            }
+
+            @Override
+            public E next() {
+                Entry<E> current = firstElement;
+                firstElement = firstElement.next;
+                return current.value;
+            }
+
+            @Override
+            public void remove() {
+                throw new UnsupportedOperationException();
+            }
+        };
+        return it;
     }
 
-    @Override
-    public boolean hasNext() {
-        Entry<E> current = this.firstElement;
-        return current.next != null;
-//        if (current.next != null) {
-//            return true;
-//        }
-//        else
-//        return false;
-    }
-
-    @Override
-    public E next() {
-        E current = firstElement.value;
-        firstElement = firstElement.next;
-//        Entry<E> current = firstElement;
-//        Entry<E> previous = null;
-//        //while (current != null) {
-//        //    System.out.println(current.value);
-//           // firstElement = current.next;
-//        if (current != null){
-//            previous = current;
-//            firstElement = current.next;
-//       }
-
-        return  current;
-
-//        Entry<E> current = firstElement;
-//        E value = current.value; // значение в текущем узле
-//        firstElement = firstElement.next;     // следующий узел
-//        return value;
-    //    Entry<E> current = firstElement;
-       // return firstElement.value;
-//        Entry<E> current = firstElement;
-//        if (current.next != null) {
-//            current = current.next;
-//        }
-//        return current.value;
-    }
-
-//    @Override
-//    public Iterator<E> iterator() {
-//        Iterator<E> it = new Iterator<E>() {
-//
-//            private int currentIndex = 0;
-//
-//            @Override
-//            public boolean hasNext() {
-//                return currentIndex < size && firstElement.next.value != null;
-//            }
-//
-//            @Override
-//            public E next() {
-//                return firstElement.value;
-//            }
-//
-//            @Override
-//            public void remove() {
-//                throw new UnsupportedOperationException();
-//            }
-//        };
-//        return it;
-//    }
-
-//    public Iterator<E> iterator() {
-//        return new MyLinkedListIterator();
-//    }
-//
-//    private class MyLinkedListIterator implements Iterator<E> {
-//
-//        private MyListNode curr;
-//
-//        public MyLinkedListIterator() {
-//            this.curr = SimpleLinkedListImpl.this.head; // голова списка
-//        }
-//
-//        public boolean hasNext() {
-//            return this.curr != null;
-//        }
-//
-//        public E next() {
-//            if (!this.hasNext()) {
-//                throw new NoSuchElementException();
-//            }
-//            E value = curr.value; // значение в текущем узле
-//            curr = curr.next;     // следующий узел
-//            return value;
-//        }
-//
-//        public void remove() {
-//            throw new UnsupportedOperationException();
-//        }
-//    }
 }

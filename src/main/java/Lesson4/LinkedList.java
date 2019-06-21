@@ -2,7 +2,7 @@ package Lesson4;
 
 import java.util.Iterator;
 
-public interface LinkedList<E>  extends Iterator<E> {
+public interface LinkedList<E> extends Iterable<E>   {
     //public interface LinkedList<E> extends Iterator<E> {
 
     void insertFirst(E value);
