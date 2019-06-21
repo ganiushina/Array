@@ -102,33 +102,34 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E> {
         return firstElement;
     }
 
-    @Override
     public Iterator<E> iterator() {
-        Iterator<E> it = new Iterator<E>() {
+        return new MyLinkedListIterator();
+    }
 
-            Entry<E> currentIndex = firstElement;
+    public class MyLinkedListIterator implements Iterator<E> {
 
-            @Override
-            public boolean hasNext() {
-              return currentIndex != null ;
+        private Entry<E> curr;
+
+        public MyLinkedListIterator() {
+            this.curr = SimpleLinkedListImpl.this.firstElement; 
+        }
+
+        public boolean hasNext() {
+            return this.curr != null;
+        }
+
+        public E next() {
+            if (!this.hasNext()) {
+                throw new NoSuchElementException();
             }
+            E value = curr.value;
+            curr = curr.next;
+            return value;
+        }
 
-            @Override
-            public E next() {
-                if (!this.hasNext()) {
-                    throw new NoSuchElementException();
-                }
-                Entry<E> current = currentIndex;
-                currentIndex = currentIndex.next;
-                return current.value;
-            }
-
-            @Override
-            public void remove() {
-                throw new UnsupportedOperationException();
-            }
-        };
-        return it;
+        public void remove() {
+            throw new UnsupportedOperationException();
+        }
     }
 
 }
