@@ -32,12 +32,14 @@ public class Backpack {
 
         for (Goods item : goods) {
             tmpWeight = tmpWeight + item.weight;
-            tmpCost = tmpCost + item.cost;
+
 
             if (tmpWeight < maxW) {
                 goodsBest.add(item);
+                tmpCost = tmpCost + item.cost;
             } else if (tmpWeight == maxW) {
                 goodsBest.add(item);
+                tmpCost = tmpCost + item.cost;
                 break;
             } else if (tmpWeight > maxW) {
                 tmpWeight = tmpWeight - item.weight;
