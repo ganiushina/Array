@@ -111,7 +111,7 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E> {
         private Entry<E> curr;
 
         public MyLinkedListIterator() {
-            this.curr = SimpleLinkedListImpl.this.firstElement; 
+            this.curr = SimpleLinkedListImpl.this.firstElement;
         }
 
         public boolean hasNext() {
