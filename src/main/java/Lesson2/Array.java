@@ -1,4 +1,4 @@
-
+package Lesson2;
 
 public interface Array<E> {
 
@@ -22,6 +22,8 @@ public interface Array<E> {
     long sortBubble();
     long sortSelect();
     long sortInsert();
+
+
 
 
 

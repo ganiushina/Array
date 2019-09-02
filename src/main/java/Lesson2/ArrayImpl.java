@@ -1,4 +1,4 @@
-
+package Lesson2;
 
 import java.util.Arrays;
 
@@ -151,6 +151,5 @@ public class ArrayImpl<E extends Object & Comparable<? super E>> implements Arra
         long elapsedTime = stopTime - startTime;
         return elapsedTime;
     }
-
 
 }
